@@ -38,7 +38,16 @@ and where nobody can say I should have read it.
 
 4. THE DIAGRAM
 
-Mermaid, so I can render it and bring an image. Do not draw it live in the meeting.
+Mermaid, because I am importing it into Excalidraw and presenting it as a sketch.
+I draw it before the call, not during.
+
+Write it so the Excalidraw import works cleanly:
+
+  use flowchart LR
+  plain node shapes only, rectangles and rounded rectangles
+  no style or classDef directives, they do not survive the import
+  at most one level of subgraph, and only if it genuinely helps
+  short node labels, three or four words, because long text overflows the box
 
 Not comprehensive. The version that fits on one screen and that someone can correct
 in ten seconds. Ten boxes at most.
@@ -47,17 +56,21 @@ Show: what triggers the work, the components that act, what each reads and write
 where the boundaries between repositories fall, and every place a human is still in
 the loop.
 
-Use a dashed edge or an explicit "not built" label for anything that is scaffolded
-or planned. Presenting scaffolding as shipped is the mistake that ends my
-credibility in this room, so be conservative. If you are not sure it is built, mark
-it as unsure.
+Use a dashed edge and an explicit "not built" label for anything scaffolded or
+planned. Presenting scaffolding as shipped is the mistake that ends my credibility
+in this room, so be conservative. If you are not certain it is built, mark it
+unsure.
+
+Put a visible question mark on the parts I am unsure about. Those marks are where I
+want them to interrupt me, so make them obvious rather than tucked away.
 
 Under the diagram, give me three or four sentences to say while it is on screen.
 The framing is fixed: this is my understanding after a short time here, tell me
 where I have it wrong. It is not a review, it is a request to be corrected.
 
 Then map each of my questions to a box or an edge, so I ask by pointing at the
-picture rather than asking cold.
+picture rather than asking cold. List it as a small table: question number, the box
+or edge it attaches to.
 
 5. THE QUESTIONS
 
@@ -91,6 +104,11 @@ changing a decision.
 
 Rough minute by minute for a thirty minute meeting. Assume my manager may run it and
 I get openings rather than the floor.
+
+Assume this setup, because it changes the pacing: the sketch is shared from one
+screen, my script is on a second screen that nobody sees, and short cues come from a
+side assistant on another machine. So I can glance, but I cannot read, and I am
+never scrolling anything while they watch.
 
 Format:
 
