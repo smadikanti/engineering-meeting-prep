@@ -1,0 +1,16 @@
+# This repo holds prompts only. Nothing you generate belongs here.
+# These entries exist so that an accidental commit fails quietly instead of
+# publishing internal material.
+
+outputs/
+analysis.md
+inventory.md
+card*.md
+seed*.md
+notes/
+transcripts/
+repos/
+doc/
+automations/
+*.local.md
+.DS_Store
