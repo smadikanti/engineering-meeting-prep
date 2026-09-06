@@ -1,131 +1,202 @@
-Continue from both previous passes. Now build what I actually take into the meeting.
+Continue from both previous passes. Build what I take into the meeting.
 
-My constraints, which should shape every choice you make below. I am new here. An
-engineer who knows more than I do already did this work and has momentum behind it.
-My manager wants to see me operate at the level I was hired at. So my job is to make
-the existing work stronger and surface risk the team has not priced yet, not to
+My constraints, which should shape everything below. I am new here. Someone who
+knows this system better than I do already did the work and has momentum. My manager
+wants to see me operate at the level I was hired at. So the job is to make the
+existing work stronger and surface risk nobody has priced yet. It is not to
 relitigate a design. If I come across as the new person second-guessing a colleague,
-I lose more than any single question could gain me.
+I lose more than any question gains me.
 
-Produce two things. First the full analysis, which stays with me. Then, at the very
-end and clearly separated, the CARD SEED.
+Produce two things. The analysis, which stays on this machine. Then the CARD SEED,
+which is the only part that leaves.
 
----
-
+================================================================
 PART ONE: THE ANALYSIS
+================================================================
 
-Write this as a document I will save and keep, not as a chat reply. It is the
-durable record and I will come back to it after the meeting.
+Write this as a document I will save and reread, not as a chat reply.
 
 1. WHAT I UNDERSTAND WITH CONFIDENCE
-   The parts of this system I could explain out loud right now and defend if
-   pushed. Be strict. If I only know it from a document and not from the code, it
-   does not go here.
+
+The parts I could explain out loud right now and defend under a follow-up question.
+
+Be strict. If I know it from a document but not from the code, it does not go here,
+it goes in section 2.
 
 2. WHAT I UNDERSTAND PARTIALLY
-   Where I have the shape but not the detail, and specifically what detail is
-   missing. These are the places where a question is cheap and useful.
+
+Where I have the shape but not the detail. Say which detail specifically. These are
+where a question is cheap and makes me look like I read the work.
+
+Format: I understand X, but I do not know Y.
 
 3. WHERE THE RECORD IS SILENT
-   Pulled forward from the reconstruction. Decisions with no recorded reasoning,
-   ranked by how much they constrain what happens next. This is the highest-value
-   list in the document, because it is exactly where asking teaches me something
-   and where nobody can accuse me of not reading.
 
-4. THE ARCHITECTURE DIAGRAM
-   Produce it as Mermaid so I can render it and bring it as an image. Do not make
-   it comprehensive. Make it the version that fits on one slide and that someone
-   can correct in ten seconds.
-   Show: what triggers the work, what components act, what they read and write,
-   where the boundaries between the repositories fall, and where a human is still
-   in the loop. Mark anything that is not yet built with a dashed edge or a clear
-   label, because presenting scaffolding as though it were shipped is the mistake
-   that ends my credibility in this meeting.
-   Underneath the diagram, give me three or four sentences to say while it is on
-   screen. The framing is fixed and non-negotiable: this is my understanding after
-   a short time here, tell me where I have it wrong. It is not a review. It is me
-   asking to be corrected, and the corrections are the reasoning I cannot get any
-   other way.
-   Then, for each box or edge where I have a question, note which question attaches
-   to it, so I can ask by pointing rather than asking cold.
+From the reconstruction, ranked by how much each one constrains what happens next.
+Highest value list in the document. This is where a question teaches me something
+and where nobody can say I should have read it.
 
-5. THE QUESTIONS, RANKED
-   Six at most. Order them for the room rather than by importance. Open with the
-   ones that are cheap for them to answer and that show I actually read the work.
-   Put anything that could land as a challenge later, once the room has warmed up.
-   For each question, give me:
-   - the question in one plain sentence, the way I would really say it out loud
-   - why it matters, one line, for my eyes only
-   - the answer that would settle it
-   - the answer that would worry me, and the one follow-up I would ask next
-   If a question only exposes a gap without changing a decision, cut it. If the
-   answer is already written down somewhere in the sources, cut it and tell me
-   where it was written down instead.
+4. THE DIAGRAM
 
-6. MEETING CHOREOGRAPHY
-   Minute by minute, roughly, for a thirty minute meeting. What I open with, when
-   the diagram goes up, where the questions land, and where I stop talking.
-   Be explicit about the silences. After the diagram, and after each of the two
-   hardest questions, I should stop and let the room fill the space. Tell me
-   exactly where those pauses go, because my instinct under pressure will be to
-   keep talking and answer my own question, and that is how I lose the information
-   I came for.
-   Also tell me what to do if my manager runs the meeting and I only get openings
-   rather than the floor.
+Mermaid, so I can render it and bring an image. Do not draw it live in the meeting.
 
-7. THE FOUR I ASK IF I ONLY GET TEN MINUTES
-   Meetings run short and get hijacked. Which four survive, and the one sentence
-   version of the diagram framing if there is no time to present it.
+Not comprehensive. The version that fits on one screen and that someone can correct
+in ten seconds. Ten boxes at most.
 
-8. WHAT I HOLD FOR LATER
-   Questions worth asking, but not in this meeting, and who to ask instead and
-   when. Naming what I am deliberately not asking is a senior signal. Asking all
-   of it at once is an interrogation.
+Show: what triggers the work, the components that act, what each reads and writes,
+where the boundaries between repositories fall, and every place a human is still in
+the loop.
 
-9. HOW TO RAISE THE REAL RISKS WITHOUT IT LANDING AS CRITICISM
-   For the two or three genuine concerns, give me exact wording. The pattern that
-   works: credit the work, ask about the scenario rather than asserting the flaw,
-   and leave them room to say they already handled it without losing face. Give me
-   the actual sentences, not a description of the technique.
+Use a dashed edge or an explicit "not built" label for anything that is scaffolded
+or planned. Presenting scaffolding as shipped is the mistake that ends my
+credibility in this room, so be conservative. If you are not sure it is built, mark
+it as unsure.
+
+Under the diagram, give me three or four sentences to say while it is on screen.
+The framing is fixed: this is my understanding after a short time here, tell me
+where I have it wrong. It is not a review, it is a request to be corrected.
+
+Then map each of my questions to a box or an edge, so I ask by pointing at the
+picture rather than asking cold.
+
+5. THE QUESTIONS
+
+Six at most. Ordered for the room, not by importance. Cheap ones that show I read
+the work go first. Anything that could land as a challenge goes later, once the room
+has warmed up.
+
+For each, this exact format:
+
+  Q1. [the question, one plain sentence, the way I would actually say it]
+  Why:      [one line, my eyes only]
+  Attaches to: [which box or edge on the diagram]
+  Settles it: [the answer that means I stop worrying]
+  Worries me: [the answer that means there is a real problem]
+  Then I ask: [the one follow-up, only if worried]
+
+Worked example of the tone I want, so you can match it:
+
+  Q1. When this runs twice on the same event, does the second run notice?
+  Why:      idempotency is nowhere in the code I read and nothing guards it
+  Attaches to: the worker box
+  Settles it: there is a dedupe key or the operation is naturally idempotent
+  Worries me: "it shouldn't happen twice"
+  Then I ask: what happens today if it does
+
+Cut any question where the answer is already written down in the sources, and tell
+me where it was written down instead. Cut any question that exposes a gap without
+changing a decision.
+
+6. CHOREOGRAPHY
+
+Rough minute by minute for a thirty minute meeting. Assume my manager may run it and
+I get openings rather than the floor.
+
+Format:
+
+  0 to 3     what I say to open
+  3 to 8     diagram up, what I say, then I stop
+  ...
+
+Mark every place I stop talking with STOP AND WAIT on its own line.
+
+Be specific about those. After the diagram, and after each of the two hardest
+questions, I go quiet and let the room fill it. My instinct under pressure is to
+keep talking and answer my own question, and that loses me the information I came
+for.
+
+Also give me: how to get in if the meeting is being driven by someone else, and how
+to close if we are running out of time.
+
+7. IF I ONLY GET TEN MINUTES
+
+Which four questions survive. Plus a one sentence version of the diagram framing for
+when there is no time to present it.
+
+8. HOLDING FOR LATER
+
+Questions worth asking, but not in this meeting.
+
+Format: question | who to ask instead | when
+
+Saying out loud that I am holding some questions for a follow-up is a good signal.
+Asking all of them at once is an interrogation.
+
+9. RAISING THE REAL RISKS WITHOUT IT LANDING AS CRITICISM
+
+For the two or three genuine concerns. Give me the exact sentences, not a
+description of the technique.
+
+The pattern that works: credit the work, ask about a scenario instead of asserting a
+flaw, and leave them an easy way to say they already handled it.
+
+Worked example of the shape:
+
+  Not: "there's no idempotency here"
+  Instead: "the retry path looks solid. If the same event came through twice, is
+  there something upstream catching that, or is that still open?"
 
 10. WHAT I OFFER
-    I should leave that meeting having taken something on. Two or three things I
-    could genuinely own in my first month that help this goal and do not step on
-    work already in flight. Bias toward the unglamorous piece nobody picked up,
-    the missing signal, or writing up what is currently only in someone's head.
-    For each, the sentence I say to commit to it, including a day.
+
+I should leave having taken something on. Two or three things I could genuinely own
+in my first month that help this goal and do not step on work in flight.
+
+Bias toward: the unglamorous piece nobody picked up, the missing signal or alerting,
+writing down what currently only exists in one person's head, or the test coverage
+on the risky path.
+
+For each, give me the sentence I say to commit to it, including a specific day.
 
 11. THINGS I MUST NOT SAY
-    Anything the artifacts do not support. Anything implying I have read more of
-    the internals than I have. Any claim about my own past work that overstates it.
-    Be specific and list the actual temptations, given what is in this material.
 
-12. WHAT I EXPECT TO BE ASKED
-    Five questions likely to come back at me based on what I am raising, each with
-    a short honest answer. Include the ones I cannot answer yet, and what an honest
-    non-answer sounds like when it comes with a next step and a date.
+Specific to this material, not generic advice. List the actual temptations: claims
+the artifacts do not support, anything implying I read more of the internals than I
+did, and any claim about my own past work that overstates it.
 
----
+12. WHAT THEY WILL ASK ME
 
+Five questions likely to come back at me based on what I am raising. Each with a
+short honest answer.
+
+Include the ones I cannot answer yet, and show what an honest non-answer sounds like
+when it comes with a next step and a date.
+
+================================================================
 PART TWO: THE CARD SEED
+================================================================
 
-Last, and clearly separated under a heading that reads exactly CARD SEED.
+Last, under a heading that reads exactly CARD SEED.
 
-This is the only part of your output that leaves this machine, so follow these
-rules exactly rather than approximately.
+This is the only part of your output that leaves this machine. Follow these rules
+exactly, not approximately.
 
-- No repository names, no service names, no internal project, tool, or system
-  names, no ticket numbers, no code, no file paths, no metrics, no customer names,
-  no team names.
-- First names only, and only for people I will address out loud anyway. No
-  handles, no titles, no reporting lines.
-- Describe systems generically. The job that reacts to the event. The store it
-  writes to. The step that still needs a human. If a detail cannot survive being
-  made generic, leave it out of the seed and keep it in the analysis above.
-- Content limited to: my one goal for the meeting, the six questions in plain
-  language, the one-line reason each matters, the concerns in generic framing, the
-  pauses, what I am offering, and my honest-scope lines.
-- No diagram in the seed. The diagram stays here.
-- The test, applied literally: it has to make complete sense to someone who knows
-  nothing about this company and has never seen this code. If a line fails that
-  test, rewrite it or drop it.
+Strip all of these:
+
+  repository names
+  service, system, tool, and internal project names
+  team names
+  ticket or issue numbers
+  code, file paths, function names
+  metrics and numbers
+  customer or partner names
+  anything acronym-shaped that an outsider would not recognise
+
+Keep first names only, and only for people I will say out loud in the room. No
+handles, no titles, no reporting lines.
+
+Describe systems generically:
+
+  "the scheduler in the ingest repo"     becomes  "the job that kicks it off"
+  "writes to the events table in Postgres" becomes "writes to the store"
+  "the manual approval in the ops tool"  becomes  "the step that still needs a person"
+
+Include only: my one goal for the meeting, my opening, the six questions in plain
+language, the one-line reason each matters, where I stop and wait, the concerns in
+generic framing, what I am offering, and my honest-scope lines.
+
+No diagram in the seed. The diagram stays here.
+
+Apply this test literally to every line before you write it: would this make
+complete sense to someone who knows nothing about this company and has never seen
+this code? If not, rewrite it generically or leave it out. If a detail cannot
+survive being made generic, it was too specific to glance at mid-sentence anyway.

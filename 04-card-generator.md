@@ -1,81 +1,92 @@
-Paste the CARD SEED below this prompt. Nothing else from the analysis should be
-here. If you find repository names, service names, file paths, or metrics in what I
-pasted, stop and tell me, because that means the wrong block was copied.
+Paste the CARD SEED below this prompt. Nothing else from the analysis.
 
-Your job is not to answer me. Your job is to write PROMPT E: a single self-contained
-prompt I will paste into a live meeting assistant that listens to the call and
-surfaces cues to me while I am talking.
+First, check it. If you see repository names, service names, file paths, function
+names, ticket numbers, team names, or metrics, stop and tell me which line, because
+that means the wrong block got copied and it should not be on this machine.
 
-Use the voice instructions already set for this project. Everything in Prompt E is
-going to be spoken out loud under mild pressure, so it has to be my spoken register
-rather than written prose. Short sentences. Plain words. No em dashes, no idioms, no
-"first, second, third", nothing that sounds drafted.
+Your job is not to answer me. Your job is to write PROMPT E.
 
-Prompt E has to work under two constraints that most prompts ignore.
+Prompt E is a single self-contained prompt I paste into a live meeting assistant
+that listens to the call and shows me cues while I am talking. Give it to me in one
+block I can copy in one action.
 
-It has to be short. Live assistants degrade badly with long context, and anything I
-cannot take in at a glance while someone is speaking is worse than nothing, because
-reading on camera is more obvious than forgetting a question.
+Use the voice instructions already set for this project. Every line in Prompt E gets
+said out loud under mild pressure, so it has to be my spoken register. Short
+sentences, plain words, no em dashes, no idioms, no "first, second, third", nothing
+that reads as drafted.
 
-It has to be a set of cues, not a script. If a line is longer than I would say in
-one breath, it is too long. I am glancing, not reciting.
+Two constraints that most prompts get wrong:
 
-Write Prompt E containing these parts, in this order:
+Short. Live assistants get worse with long context, and anything I cannot take in at
+a glance is worse than nothing, because reading on camera is more obvious than
+forgetting a question.
 
-CONTEXT LINE
-  One or two sentences telling the assistant who is in the meeting, what my role is,
-  how long I have been here, and that my goal is to ask rather than to conclude.
+Cues, not a script. If a line is longer than I would say in one breath, cut it. I am
+glancing, not reciting. One screen total.
 
-MY ONE GOAL
+Write Prompt E to this structure.
+
+  CONTEXT
+  One or two sentences: who is in the meeting, my role, how long I have been here,
+  and that my goal is to ask rather than conclude.
+
+  MY GOAL
   One line.
 
-MY OPENING
-  Two sentences that credit the existing work and make clear I am here to understand
-  it rather than review it. Written the way I talk.
+  OPENING
+  Two sentences. Credit the existing work, make clear I am here to understand it and
+  not review it. Written the way I talk.
 
-THE QUESTIONS
-  Numbered, in the order I plan to ask them. Each is the single sentence I say and
-  nothing more. Under each, indented, one word or a short phrase reminding me why I
-  am asking. Nothing else.
+  QUESTIONS
+  Numbered in the order I ask them. Each is the one sentence I say. Under it,
+  indented, one word or short phrase reminding me why. Nothing else.
 
-WHERE I STOP TALKING
+  Format:
+    1. When this runs twice on the same event, does the second run notice?
+       dedupe
+
+  STOP AND WAIT
   The two or three points where I ask and then go quiet. Marked clearly, because
-  under pressure I will want to fill the silence and answer my own question.
+  under pressure I will fill the silence and answer my own question.
 
-IF THEY PUSH BACK
-  For each question, the likely response and my one-line reply. Cover the three
-  shapes this takes: they already thought of it and have a good answer, so I
-  acknowledge it and move on without pretending I knew; they get defensive, so I
-  lower the temperature and make it about the scenario rather than the design; they
-  turn it around and ask what I would do instead.
+  IF THEY PUSH BACK
+  Per question, the likely response and my one-line reply. Cover three shapes:
+    they already handled it, so I acknowledge it and move on without pretending I
+    knew
+    they get defensive, so I drop the temperature and make it about the scenario
+    they turn it around and ask what I would do instead
 
-WHEN I CANNOT ANSWER
+  WHEN I CANNOT ANSWER
   This will happen. What would you do here. Does this look right to you. How did you
-  handle this before. Give me honest lines that neither stall nor bluff. Saying I do
-  not know yet is fine when it comes with what I will do about it and by when. Also
-  give me one line for being asked to endorse something I have not properly looked
+  handle this before.
+  Give me honest lines that neither stall nor bluff. Not knowing yet is fine when it
+  comes with what I will do and by when.
+  Include one line for being asked to endorse something I have not properly looked
   at, that buys time without sounding evasive.
 
-WHAT I AM OFFERING
+  OFFERING
   Two lines maximum, including the day I commit to.
 
-DO NOT SAY
-  A short list of the things I would be tempted to claim under pressure and cannot
-  back up.
+  DO NOT SAY
+  Short list of what I would be tempted to claim under pressure and cannot back up.
 
-INSTRUCTIONS TO THE ASSISTANT
-  Close Prompt E with how the assistant should behave during the call. It surfaces
-  at most one short cue at a time. It never writes me a paragraph. When a question
-  of mine gets answered, it marks it done rather than repeating it. When someone
-  asks me something the card covers, it shows only the relevant line. When someone
-  asks something the card does not cover, it says nothing rather than improvising,
-  because a confident wrong cue is worse than silence. And it never invents a name,
-  a number, or a fact about this company, since it has none.
+  ASSISTANT RULES
+  How the assistant behaves during the call:
+    show one short cue at a time, never a paragraph
+    when a question of mine gets answered, mark it done instead of showing it again
+    when someone asks me something the card covers, show only that line
+    when someone asks something the card does not cover, stay silent rather than
+    improvising, because a confident wrong cue is worse than nothing
+    never invent a name, a number, or a fact about this company, since you have none
+    if I go off the question order, follow me, do not pull me back
 
-After you have written Prompt E, and separately from it, give me two things for
-reading before the call rather than during it. A ten-line rehearsal version I can
-say out loud once to check that the questions actually sound like me. And the five
-follow-up questions most likely to come back at me based on what I am asking, each
-with a short honest answer.
+That is the end of Prompt E.
 
-Show me Prompt E in a single block I can copy in one action.
+Then, separately and clearly outside that block, give me two things to read before
+the call rather than during it.
+
+A rehearsal version. Ten lines at most, just my opening and the six questions as I
+would say them, so I can read it out loud once and hear whether it sounds like me.
+
+The five follow-up questions most likely to come back at me based on what I am
+asking, each with a short honest answer.

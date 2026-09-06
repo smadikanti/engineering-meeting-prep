@@ -1,52 +1,93 @@
-Before anything else, take inventory of what I actually have. Do not analyze, do not
-summarize the work, do not form a view. I only want to know what is in front of me
-and what you were able to read.
+Take inventory of what I have. Do not analyze the work, do not summarize what it
+does, do not form a view. I want to know what is in front of me and how much of it
+you actually read.
 
-The material is in one folder. It contains a design document or write-up, meeting
-transcripts, several repositories, and possibly notes I wrote myself.
+The material is in one folder:
 
-Produce this:
+  doc/          a design document or write-up
+  transcripts/  meeting recordings and standups, in date order
+  repos/        cloned repositories
+  notes/        anything I wrote down myself
+
+Produce these six sections.
 
 1. WHAT IS HERE
-   Every source, one line each. For each: what kind of artifact it is, its date if
-   you can determine one, and its rough size or length. For repositories, give the
-   date of the most recent commit and roughly how much activity there has been in
-   the last few months.
 
-2. COVERAGE, STATED HONESTLY
-   The single most important part of this pass. For each repository, tell me
-   whether you read all of it, sampled it, or only read the top-level structure and
-   names. Same for the transcripts and the document. If something was too large,
-   unreadable, or you skipped it, say so plainly here rather than quietly working
-   around it later.
-   I would rather know you covered two repositories properly than believe you
-   covered six.
+One line per source, in this format:
 
-3. WHAT LOOKS STALE
-   Anything that has not been touched in a while, or that appears superseded by
-   something else in the folder. Do not conclude it is dead. Just flag it so I can
-   ask.
+  path | kind | date | size or length
 
-4. SPEAKER ATTRIBUTION IN THE TRANSCRIPTS
-   List who appears to be speaking in each transcript and how confident you are.
-   Transcription tools mislabel speakers routinely, so mark every attribution as
-   CONFIDENT or UNCERTAIN. Anything I might repeat out loud in a room needs to be
-   verifiable, and a mislabeled quote in front of the person who did not say it is
-   a bad way to spend my credibility.
+For each repository also give: date of the most recent commit, roughly how many
+commits landed in the last ninety days, and how many different people committed.
 
-5. WHAT IS MISSING THAT I WOULD EXPECT TO EXIST
-   Given what is here, what is conspicuously absent. Tests, deployment config,
-   runbooks, a decision record, a rollout plan, monitoring. Absence is a question,
-   not an accusation, so list it neutrally.
+2. COVERAGE
 
-6. WHAT TO READ FIRST
-   If I only had an hour with this material myself, the order you would put it in,
-   and why.
+This is the most important section and I read it before I read anything else.
+
+Label every source with exactly one of these:
+
+  READ FULLY      you processed all of it
+  SAMPLED         you read part of it, and you say which part
+  STRUCTURE ONLY  you read directory and file names, not the contents
+  SKIPPED         you did not read it, and you say why
+
+For repositories, name the actual files you read. Do not write "reviewed the
+codebase". A real answer looks like this:
+
+  repos/scheduler | SAMPLED | read main.py, handlers/, config/prod.yaml.
+  Did not read tests/ or the migrations directory.
+
+If you ran out of room, say where you stopped. Six repositories is more than most
+sessions can hold, and I would rather know you read two properly than believe you
+read all six.
+
+3. STALE OR SUPERSEDED
+
+Anything that has not been touched in a while, or that looks replaced by something
+else in the folder. Give the evidence: last commit date, a comment saying it moved,
+a document that refers to it in the past tense. Do not conclude it is dead. I will
+ask.
+
+4. TRANSCRIPT SPEAKERS
+
+Per transcript, list who appears to be speaking, and mark each name CONFIDENT or
+UNCERTAIN.
+
+Mark UNCERTAIN when the label is generic like Speaker 1, when a name appears only
+once, when the same person seems split across two labels, or when a name is spelled
+inconsistently.
+
+I may repeat one of these quotes in a room with the person who said it, so a wrong
+attribution costs me more than a missing one.
+
+5. MISSING
+
+Things I would expect to exist and do not see. Go through this list explicitly and
+mark each present or absent:
+
+  tests
+  continuous integration config
+  deployment config
+  monitoring or alerting config
+  runbook or on-call documentation
+  decision records
+  a rollout or migration plan
+  a README with more than a title
+  any kind of changelog
+
+Absent is a question for the meeting, not a fault. Report it flatly.
+
+6. READING ORDER
+
+If I had one hour with this material myself, what would I read and in what order.
+One line each on why.
 
 Rules:
+
 - Never invent a name, a handle, a team, a service, or an acronym. If it is not in
   the sources, write UNKNOWN.
-- Do not speculate about purpose in this pass. Naming what a thing appears to do
-  from its structure is fine. Explaining why it exists is the next prompt's job.
-- If two sources describe the same thing differently, note it and move on. Do not
-  resolve it.
+- Do not explain why anything exists or whether it is a good idea. That is the next
+  prompt.
+- If two sources describe the same thing differently, note the difference and move
+  on. Do not reconcile them.
+- Keep the whole thing under two pages. This is an index, not an analysis.
