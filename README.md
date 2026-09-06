@@ -95,6 +95,9 @@ under it.
 It writes **Prompt E**, which is what goes into the live assistant. Reusable for the
 next meeting.
 
+Prompt E is a system prompt, not something you paste mid-call. Setup, settings and
+the two things that will embarrass you are in **`cluely-setup.md`**.
+
 Say the rehearsal version out loud once. A script you have never spoken is a script
 you read from, and reading on camera is more obvious than forgetting a question.
 
